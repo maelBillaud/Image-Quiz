@@ -29,9 +29,15 @@ img{
 input{
     border-radius: 40px;
     height: 5rem;
+    background-color: red;
+    font-family : inherit;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
 }
 
 #start{
     margin-top: 3rem;
     margin-bottom: 3rem;
+    background-color: rgb(5, 182, 5);
 }
