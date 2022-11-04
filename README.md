@@ -1,2 +1,2 @@
-# Image Quizz
- Site de quizz avec 3 niveaux
+# Image Quiz
+ Site de quiz avec 3 niveaux de difficultés
