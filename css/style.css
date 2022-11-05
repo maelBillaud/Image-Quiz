@@ -6,7 +6,8 @@
 }
 
 body {
-    margin: 2rem;
+    margin: 4vh 2vw;
+    height: 92vh;
     background: #022b85;
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
@@ -14,11 +15,12 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 img, input{
     width: 25rem;
+    max-width: 96vw;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -37,7 +39,5 @@ input{
 }
 
 #start{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     background-color: rgb(5, 182, 5);
 }
