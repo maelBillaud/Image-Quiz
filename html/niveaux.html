@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/niveaux.css">
+    <!-- Pour les icons -->
+    <script src="https://kit.fontawesome.com/13de433deb.js" crossorigin="anonymous"></script>
     <title>Choix des niveaux</title>
 </head>
 <body>
-    
+    <nav>
+        <button id="btn" onclick="window.location='../index.html'"><i class="fa-solid fa-arrow-left-long"></i></button>
+        <h3>Image quiz</h3>
+        <p id="void"></p>
+    </nav>
+    <main>
+        <p id="points">POINTS : <span id="pointValue"></span></p>
+        <ul>
+            <li>Niveau 1</li>
+            <li>Niveau 2</li>
+            <li>Niveau 3</li>
+        </ul>
+        <p id="restart" onclick="resetPoint()">NOUVELLE PARTIE</p>
+    </main>
+    <script type="module" src="../js/niveau.js"></script>
 </body>
 </html>
