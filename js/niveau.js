@@ -1,11 +1,6 @@
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function() {
-        navigator.serviceWorker
-        .register("sw.js")
-        .then(res => console.log("Enregistrement du service worker réussi"))
-        .catch(err => console.log("Échec de l'enregistrement du service worker", err))
-    })
-}
+document.addEventListener('DOMContentLoaded', function() {
+    
+  });
 
 const newGame = {
     points: 0
@@ -29,5 +24,6 @@ const pathPoint = "../data/points.json";
 
 function resetPoint() {
     // saveData(pathPoint, newGame);
-    document.getElementById("pointValue").textContent("0");
+    let pointValue = document.getElementById("pointValue");
+    pointValue.textContent = "0";
 }
