@@ -1,29 +1,41 @@
-document.addEventListener('DOMContentLoaded', function() {
+var temp = window.localStorage.getItem("points");
+var points;
+
+const pointValue = document.getElementById("pointValue");
+
+function setLockLevel() {
+    let lock2 = document.getElementById("lock2");
+    let lock3 = document.getElementById("lock3");
+    if(points < 2) {
+        lock2.setAttribute("class", "fa-solid fa-lock");
+        lock3.setAttribute("class", "fa-solid fa-lock");
+    } else {
+        if(points < 4) {
+            lock2.setAttribute("class", "");
+            lock3.setAttribute("class", "fa-solid fa-lock");
+        } else {
+            lock2.setAttribute("class", "");
+            lock3.setAttribute("class", "");
+        }
+    }
     
-  });
-
-const newGame = {
-    points: 0
-};
-
-const pathPoint = "../data/points.json";
-
-// import { writeFile } from "fs";
-
-// const saveData = (file, data) => {
-//     const finished = (error) => {
-//         if(error) {
-//             console.error(error);
-//             return;
-//         }
-//     }
-//     //param null et 2 pour l'enregistrer dans un format lisible
-//     const jsonData = JSON.stringify(data, null, 2);
-//     writeFile(file, jsonData, finished);
-// }
+}
 
 function resetPoint() {
-    // saveData(pathPoint, newGame);
-    let pointValue = document.getElementById("pointValue");
-    pointValue.textContent = "0";
+    pointValue.innerText = "0";
+    window.localStorage.setItem("points", "0");
+    points = 0;
+    setLockLevel();
 }
+
+//On va stocker les points dans le local storage
+if(temp === null) {
+    window.localStorage.setItem("points", "0");
+    points = 0;
+} else {
+    points = parseInt(temp);
+}
+
+pointValue.innerText = points;
+
+setLockLevel();

@@ -61,14 +61,13 @@ main{
 li{
     list-style-type: none;
     margin: 2rem auto;
-    padding-left: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
     background-color: #001b56;
     border: solid;
     border-color: #2d5276;
     border-radius: 15px;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
     width: 20rem;
     max-width: 85vh;
     max-height: 85vh;
@@ -77,4 +76,3 @@ li{
 #restart{
     margin: 2rem auto;
 }
-
