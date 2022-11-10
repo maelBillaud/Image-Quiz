@@ -1,0 +1,14 @@
+[
+    {
+        "img": "../images/obama.png",
+        "question": "Qui est ce personnage célèbre ?",
+        "answers": ["Nelson Mandela", "Barack Obama", "Elon Musk", "Emmanuel Macron"],
+        "answerIndex": 1
+    },
+    {
+        "img": "../images/amazon.png",
+        "question": "Quelle est cette entreprise ?",
+        "answers": ["Google", "Auchan", "Airbus", "Amazon"],
+        "answerIndex": 3
+    }
+]

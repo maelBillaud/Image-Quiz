@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/niveaux.css">
+    <link rel="stylesheet" href="../css/niveau1.css">
     <!-- Suppression de l'erreur "favicon.ico 404 (Not Found)" -->
     <link rel="icon" href="data:;base64,=">
     <!-- Pour les icons -->
@@ -12,12 +12,11 @@
 </head>
 <body>
     <nav>
-        <button id="btn" onclick="window.location='niveaux.html'"><i class="fa-solid fa-arrow-left-long"></i></button>
+        <button id="btn-retour" onclick="window.location='niveaux.html'"><i class="fa-solid fa-arrow-left-long"></i></button>
         <h3>Image quiz</h3>
-        <p id="void"></p>
+        <p id="score"><span id="score-value"></span> pts</p>
     </nav>
-    <main>
-        
+    <main id="main">
     </main>
     <script src="../js/niveau1.js"></script>
 </body>

@@ -20,8 +20,8 @@ nav{
     justify-content: space-between;
 }
 
-#btn{
-    margin: 1vh;
+#btn-retour{
+    margin: 1vh 4vh 1vh 1vh;
     width: 5vh;
     height: 5vh;
     border-radius: 50%;
@@ -30,11 +30,59 @@ nav{
     color: white;
 }
 
+
 #btn{
     cursor: pointer;
 }
 
-#void{ 
-    width: 5vh;
+#score{ 
+    width: 9vh;
     margin-right: 1vh;
+}
+
+img{
+    width: 40vh;
+    border-radius: 15px;
+}
+
+h2{
+    margin: 1vh;
+}
+
+.questions{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 50%; */
+}
+
+.question{
+    margin: 1vh auto;
+    padding: 1rem;
+    width: 20rem;
+    text-align: left;
+    border: solid;
+    background-color: #001b56;
+    border-color: #2d5276;
+    border-radius: 15px;
+    max-width: 85vh;
+    max-height: 85vh;
+}
+
+input{
+    margin-right: 10px;
+}
+
+#btn-validate, #btn-next{
+    margin: 2vh;
+    padding: 1rem;
+    width: 15rem;
+    font-size: 1.5em;
+    color: white;
+    background-color: green;
+    border-radius: 25px;
+}
+
+#btn-next{
+    background-color:red;
 }
