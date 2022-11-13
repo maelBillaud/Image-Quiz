@@ -73,7 +73,7 @@ input{
     margin-right: 10px;
 }
 
-#btn-validate, #btn-next{
+#btn-validate, #btn-next, #btn-fin{
     margin: 2vh;
     padding: 1rem;
     width: 15rem;
@@ -83,6 +83,6 @@ input{
     border-radius: 25px;
 }
 
-#btn-next{
+#btn-next, #btn-fin{
     background-color:red;
 }

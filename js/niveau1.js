@@ -46,7 +46,18 @@ function createPage(question) {
 }
 
 function checkAnswer(question) {
-    const valid = document.getElementById("btn-validate");
+    
+}
+
+async function main () {
+    let res = await fetch("../data/niveau1.json");
+    let questions = await res.json();
+    const question1 = questions[0];
+    const question2 = questions[1];
+
+    createPage(question1);
+    
+    var valid = document.getElementById("btn-validate");
     valid.addEventListener("click", function () {
         var answerIndex = -1;
         answers = document.getElementsByTagName("input");
@@ -58,7 +69,7 @@ function checkAnswer(question) {
                 i++;
             }
         }
-        if(answerIndex === question.answerIndex) {
+        if(answerIndex === question1.answerIndex) {
             correct = document.getElementsByClassName("question")
             correct[answerIndex].style.backgroundColor = "green";
             currentScore ++;
@@ -66,7 +77,7 @@ function checkAnswer(question) {
         } else {
             wrong = document.getElementsByClassName("question")
             wrong[answerIndex].style.backgroundColor = "red";
-            wrong[question.answerIndex].style.backgroundColor = "green";
+            wrong[question1.answerIndex].style.backgroundColor = "green";
         }
 
         valid.parentNode.removeChild(valid);
@@ -75,23 +86,50 @@ function checkAnswer(question) {
         btnNext.setAttribute("id", "btn-next");
         btnNext.innerText = "Suivant";
 
-        console.log(btnNext);
-
         const mainElement = document.getElementById("main");
         mainElement.appendChild(btnNext);
+
+        btnNext.addEventListener("click", function() {
+            mainElement.innerHTML = "";
+
+                    /** QUESTION 2 **/
+
+            createPage(question2);
+            valid = document.getElementById("btn-validate");
+            valid.addEventListener("click", function () {
+                var answerIndex = -1;
+                answers = document.getElementsByTagName("input");
+                let i = 0;
+                while(answerIndex === -1 && i < answers.length) {
+                    if(answers[i].checked === true) {
+                        answerIndex = i;
+                    } else {
+                        i++;
+                    }
+                }
+                if(answerIndex === question2.answerIndex) {
+                    correct = document.getElementsByClassName("question")
+                    correct[answerIndex].style.backgroundColor = "green";
+                    currentScore ++;
+                    setPoints(currentScore);
+                } else {
+                    wrong = document.getElementsByClassName("question")
+                    wrong[answerIndex].style.backgroundColor = "red";
+                    wrong[question2.answerIndex].style.backgroundColor = "green";
+                }
+        
+                valid.parentNode.removeChild(valid);
+        
+                const btnFin = document.createElement("button");
+                btnFin.setAttribute("id", "btn-fin");
+                btnFin.setAttribute("onclick", "window.location='niveaux.html'");
+                btnFin.innerText = "Terminer ce quiz";
+        
+                const mainElement = document.getElementById("main");
+                mainElement.appendChild(btnFin);
+            });
+        })
     });
-
-    
-}
-
-async function main () {
-    let res = await fetch("../data/niveau1.json");
-    let questions = await res.json();
-    const question1 = questions[0];
-    const question2 = questions[1];
-
-    createPage(question1);
-    checkAnswer(question1);
 
     
 
