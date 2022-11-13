@@ -21,6 +21,11 @@ function setLockLevel() {
     
 }
 
+function goLevel() {
+    console.log("test");
+    window.open='niveau1.html';
+}
+
 function resetPoint() {
     pointValue.innerText = "0";
     window.localStorage.setItem("points", "0");

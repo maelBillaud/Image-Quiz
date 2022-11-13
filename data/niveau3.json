@@ -1,0 +1,14 @@
+[
+    {
+        "img": "../images/tableau.jpg",
+        "question": "Qui a peint ce tableau ?",
+        "answers": ["Claude Monet", "Vincent Van Gohg", "Paul Cézanne", "Vassily Kandinsky"],
+        "answerIndex": 3
+    },
+    {
+        "img": "../images/empereur.jpg",
+        "question": "Quel empereur germanique reçu le surnom de « Stupor Mundi » de son vivant ?",
+        "answers": ["Henri II", "François II", "Frédéric II", "Othon IV"],
+        "answerIndex": 2
+    }
+]

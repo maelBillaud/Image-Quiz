@@ -1,0 +1,14 @@
+[
+    {
+        "img": "../images/aire.jpg",
+        "question": "Quelle est l'aire de ce cercle ?",
+        "answers": ["8", "50.24", "25.12", "64"],
+        "answerIndex": 1
+    },
+    {
+        "img": "../images/JO.jpg",
+        "question": "En quelle année à eu lieu les premiers Jeux Olympiques ?",
+        "answers": ["1901", "1876", "1896", "1929"],
+        "answerIndex": 2
+    }
+]
