@@ -6,24 +6,28 @@ const pointValue = document.getElementById("pointValue");
 function setLockLevel() {
     let lock2 = document.getElementById("lock2");
     let lock3 = document.getElementById("lock3");
+    let level2 = document.getElementById("level2");
+    let level3 = document.getElementById("level3");
+    context-menu
     if(points < 2) {
         lock2.setAttribute("class", "fa-solid fa-lock");
+        level2.setAttribute("onclick", "");
         lock3.setAttribute("class", "fa-solid fa-lock");
+        level3.setAttribute("onclick", "");
     } else {
         if(points < 4) {
             lock2.setAttribute("class", "");
+            level2.setAttribute("onclick", "window.location='niveau2.html'");
             lock3.setAttribute("class", "fa-solid fa-lock");
+            level3.setAttribute("onclick", "");
         } else {
             lock2.setAttribute("class", "");
+            level2.setAttribute("onclick", "window.location='niveau2.html'");
             lock3.setAttribute("class", "");
+            level3.setAttribute("onclick", "window.location='niveau3.html'");
         }
     }
     
-}
-
-function goLevel() {
-    console.log("test");
-    window.open='niveau1.html';
 }
 
 function resetPoint() {
