@@ -49,12 +49,13 @@ main{
 #points{
     margin: 2rem auto;
     border-radius: 40px;
-    padding: 1rem 10rem;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     background-color: salmon;
     font-size: 2rem;
     font-weight: bold;
-    max-width: 92vh;
-    max-height: 92vh;
+    width: 450px;
+    max-width: 92vw;
     cursor: context-menu;
 }
 
