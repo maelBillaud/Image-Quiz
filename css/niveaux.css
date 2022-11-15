@@ -74,6 +74,10 @@ li{
     max-height: 85vh;
 }
 
+.lock:hover{
+    cursor: context-menu;
+}
+
 #restart{
     margin: 2rem auto;
 }
