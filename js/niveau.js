@@ -8,7 +8,6 @@ function setLockLevel() {
     let lock3 = document.getElementById("lock3");
     let level2 = document.getElementById("level2");
     let level3 = document.getElementById("level3");
-    context-menu
     if(points < 2) {
         lock2.setAttribute("class", "fa-solid fa-lock");
         level2.setAttribute("onclick", "");
